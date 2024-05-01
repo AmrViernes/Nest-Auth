@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from "typeorm";
+import { ReportEntity } from "src/reports/entities/report.entity";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany } from "typeorm";
 
 @Entity()
 export class UserEntity {
@@ -10,6 +11,13 @@ export class UserEntity {
 
     @Column({ length: 128 })
     password: string
+
+    // Normal User Role = 1, Admin User Role = 2
+    @Column({default: 1})
+    role: number
+
+    @OneToMany(() => ReportEntity, report => report.user)
+    reports: ReportEntity[]
 
     @CreateDateColumn()
     createdAt: Date;
