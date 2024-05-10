@@ -9,7 +9,7 @@ export class AdminGuard implements CanActivate {
     if (request.currentUser.role === 2) {
       return true;
     } else {
-      return false;
+      return false
     }
   }
 }
