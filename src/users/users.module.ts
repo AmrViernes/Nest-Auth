@@ -4,7 +4,7 @@ import { UsersController } from './users.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from './entities/user.entity';
 import { AuthService } from 'src/auth/auth.service';
-import { CurrentUserMiddleware } from 'src/middlewares/current-user/current-user.middleware';
+import { CurrentUserMiddleware } from 'src/middlewares/current-user/current-user.middleware'
 
 @Module({
   controllers: [UsersController],
