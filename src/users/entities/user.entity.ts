@@ -1,5 +1,5 @@
 import { ReportEntity } from "src/reports/entities/report.entity";
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany } from "typeorm"
 
 @Entity()
 export class UserEntity {
